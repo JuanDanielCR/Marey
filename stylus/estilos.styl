@@ -1,0 +1,408 @@
+@import "normalize.styl"
+@import "nib"
+//Iconos
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?mj5sa');
+	src:url('../fonts/icomoon.eot?#iefixmj5sa') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?mj5sa') format('woff'),
+		url('../fonts/icomoon.ttf?mj5sa') format('truetype'),
+		url('../fonts/icomoon.svg?mj5sa#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before 
+	content "\e600"
+.icon-mail:before 
+	content "\e601"
+.icon-video:before 
+	content  "\e602"
+.icon-twitter:before 
+	content "\e603"
+.icon-facebook:before 
+	content "\e604"
+.icon-googleplus:before
+	content "\e605"
+//FIN ICONOS
+rosa_obscuro=#CD4435
+rosa_claro=#EF0F56
+rosa_pastel=#FA435A
+morado_claro=#6F0728
+body
+	font-family 'Varela Round', sans-serif
+	font-size 16px
+//OOCSS 
+.zero
+	margin 0
+	padding 0
+.overflow
+	overflow hidden
+.vineta
+	text-decoration none
+	list-style-type none
+h2
+	font-size 4em
+	padding-left .5em
+	letter-spacing 3px
+	color rosa_claro
+	text-transform uppercase
+//HEADER
+.header 
+	background-color white
+	position fixed
+	top 0
+	left 0
+	right 0
+	z-index 3
+	border-bottom solid 1px rosa_claro 
+	h1
+		color rosa_claro
+		float left
+		text-transform uppercase
+		font-size 2.5em
+		margin 0.3em 0.3em 0 0.3em
+		letter-spacing 2px
+	img
+		float left
+		margin 0.5em 0 0 0.6em 
+	.linker 
+		font-size 1em
+		color rosa_claro
+		letter-spacing 1px
+		text-transform uppercase
+		text-decoration none
+		padding 1em 1em 1.5em 1em
+
+	.list
+		text-align center
+		float right
+		margin 0 1em 0 100px
+		font-size 1.2em
+	.item 
+		padding 1em 0 1.2em 0em
+		border-top 0.5em solid transparent
+		display inline-block
+		transition .3s border-top			
+		cursor pointer
+		&:hover
+			border-top 0.5em solid rosa_claro
+.social
+	display inline-block
+	font-size 1em
+	margin 0
+	padding 0em
+	a
+		border-radius 50%
+		background-color rosa_claro
+		padding .4em
+		color white
+		text-decoration none
+		transition .3s background
+		&:hover
+			background-color morado_claro
+//SECCION INICIO	
+.begin
+	background-color white
+	height 100%
+	margin-top 74px
+	position relative
+	min-width 100%
+	min-height 100%
+	.welcome
+		width 40%
+		float right
+		min-height 100%
+		margin 0 auto
+	.carrusel
+		margin 0 auto
+		text-align center
+	.container
+		padding-right 3em
+	.message
+		background-color white
+		text-align center
+		color white
+		float right
+		width 60%
+		margin 1em auto
+		.effects
+			cursor pointer
+			position relative
+			overflow hidden
+			/*EFECTOS HOVER*/
+			.overlay
+				height 0
+				transition all 0.5s
+				position absolute
+				z-index 21
+				background-color rgba(0, 0, 0, .7)
+				overflow hidden
+				bottom 0
+				width 100%
+				p
+					font-size 16px
+					text-align left
+					padding-left 1em
+		.effects.hover .overlay
+			height 100%
+		/*FIN EFECTOS HOVER*/
+		.top 
+			width 50%
+			float left
+			font-size 4em
+		.one 
+			background-color rgb(203, 5, 32)	
+			text-shadow 5px 5px 5px rgb(159, 0, 19)
+		.two
+			background-color rgb(159, 0, 19)
+		.medium
+			width 25%
+			float left
+			font-size 3em
+		.tree 
+			background-color #D83723
+		.four
+			background-color #F85D28
+		.five
+			background-color #FC961C
+		.six
+			background-color #E16919
+		.bottom
+			width 20%
+			float left
+			font-size 2.5em
+		.seven
+			background-color #FF7C5B
+		.eigth
+			background-color rgb(125, 156,23)
+		.nine
+			background-color rgb(149, 195, 26)
+		.ten
+			background-color #4B7BE8 
+		.eleven
+			background-color rgb(57,114, 143)
+//GALERIA (section)
+.galery
+	padding 0 1em
+	background-image url(../images/studio.png)
+	background-size cover
+	text-align center
+	overflow hidden
+	.title
+		font-size 4em
+		letter-spacing .5em
+		color white
+		text-transform uppercase
+	.carrusel
+		background-color rgba(0,0,0,0.6)
+		text-align center
+		margin 2em auto
+		padding 1em 0
+		width 50%
+/*Ancho de la galeria (div)*/
+	.ancho
+		width 500px
+		margin: 1em auto;
+		img
+			margin 0 
+	.previewd
+		width 500px
+		text-align center
+		margin 2em auto
+		div
+			margin 0 auto
+			border-radius 12px
+//CONTACTO
+.contact
+	color gray
+	overflow hidden	
+	.intro
+		text-align center
+		margin 1em auto
+		font-size 1.5em
+	a
+		float left 
+		background-color rosa_claro
+		text-decoration none
+		color white
+		border 2px solid morado_claro
+		border-radius 50%
+		font-size 2.5em
+		padding .3em
+		margin 0 .5em
+		transition color .3s
+		&:hover
+			color morado_claro
+	.medio
+		float right
+	.red
+		width 50%
+		float left
+	ul 
+		list-style-type none
+	li
+		overflow hidden
+		padding 1.5em
+		font-size 1.2em
+	.nored
+		width 50%
+		float left
+//VIDEO
+.video 
+	background-color morado_claro
+	padding-bottom 1em
+	.item
+		width 70%
+		margin 1em auto
+		background-color white
+		border-radius 15px
+		border 5px solid rosa_pastel
+		overflow hidden
+		figure
+			float left
+		p
+			float left
+			width 60%
+			text-align center
+		a 
+			text-align center
+			float left
+			width 60%
+	.titulo
+		font-size 2em
+		margin .5em
+		color rosa_pastel
+	.desc
+		color gray
+		letter-spacing 1px
+		word-spacing 2px
+//BIOGRAFIA
+.biography
+	overflow hidden
+	min-width 100%
+	.actual
+		min-width 100%
+		overflow hidden
+		figure
+			float left
+			width 40%
+			margin 0
+			padding 0
+			text-align center
+			img
+				margin 0 auto
+		h3
+			color rosa_claro
+			font-size 3em
+			float right
+			width 60%
+		p 
+			line-height 1.5em
+			float right
+			color gray
+			word-spacing 2px
+			width 60%
+	.life
+		text-align center
+		float left                        
+		width 25%
+		padding 0
+		h3
+			letter-spacing .2em
+			border-left 2px solid rosa_pastel
+			color morado_claro
+			margin 0
+			padding .8em 0
+		p 
+			text-align left
+			margin-top 0
+			padding .5em
+//MUSICA
+.music 
+	margin 1em
+//FOOTER	
+.footer 
+	background-color rosa_pastel	
+	
+@media screen and (max-width : 767px)
+	h2
+		font-size 2em
+	.video 
+		p
+			min-width 100%
+		figure
+			margin 0 auto
+			display block
+			min-width 100%
+			text-align center
+			img 
+				margin 0 auto 
+		.titulo
+			margin 0
+			padding 0
+			font-size 1.5em
+			text-align center
+		.desc
+			display none
+	.header
+		position relative
+		.list
+			background-color red
+			width 200px
+			z-index 5
+			position absolute
+			right -200px
+			margin 0
+			padding 0
+		h1
+			display none
+		.item
+			display block
+	.message
+		display none
+	.contact 
+		.red 
+			min-width 100%
+			display block
+			ul
+				margin 0
+				padding 0
+			li
+				min-width 100%
+				margin 0
+				padding 0
+				font-size 1em
+				text-align right
+			a
+				float left
+				margin 2px
+		.nored
+			min-width 100%
+			display block
+			ul
+				margin 0
+				padding 0
+			li
+				min-width 100%
+				margin 0
+				padding 0
+				font-size 1em
+				text-align right
+			a
+				float left
+				margin 2px
